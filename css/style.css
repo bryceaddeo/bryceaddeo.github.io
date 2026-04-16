@@ -208,7 +208,7 @@ nav a.active { color: var(--white); background: var(--orange); }
 
 .hero-photo {
   width: 100%;
-  max-width: 320px;
+  max-width: 420px;
   aspect-ratio: 3/4;
   object-fit: cover;
   object-position: center top;
