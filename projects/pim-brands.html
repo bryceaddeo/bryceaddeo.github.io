@@ -3,8 +3,155 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Manufacturing Performance Engineer Intern at PIM Brands — Bryce Addeo Portfolio</title>
+  <title>PIM Brands Internship — Bryce Addeo Portfolio</title>
   <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .pim-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      margin-bottom: 3.5rem;
+    }
+
+    .pim-intro-text p {
+      color: var(--gray-700);
+      font-size: 0.97rem;
+      line-height: 1.85;
+    }
+
+    .pim-intro-img {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(13,35,71,0.12);
+    }
+
+    .pim-intro-img img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .goals-section { margin-bottom: 3.5rem; }
+
+    .goal-card {
+      border: 1.5px solid var(--gray-100);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 1.25rem;
+      transition: box-shadow 0.18s;
+    }
+
+    .goal-card:hover { box-shadow: 0 6px 24px rgba(13,35,71,0.09); }
+
+    .goal-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.1rem 1.4rem;
+      background: var(--cream);
+      border-bottom: 1.5px solid var(--gray-100);
+    }
+
+    .goal-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .goal-header h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+
+    .goal-body { padding: 1.1rem 1.4rem; }
+
+    .goal-body ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .goal-body ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.93rem;
+      color: var(--gray-700);
+      line-height: 1.6;
+    }
+
+    .goal-body ul li::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--orange);
+      flex-shrink: 0;
+      margin-top: 0.55rem;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 4/3;
+      box-shadow: 0 4px 16px rgba(13,35,71,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .photo-grid img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 28px rgba(13,35,71,0.16);
+    }
+
+    .bonus-section {
+      background: var(--cream);
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid var(--orange);
+    }
+
+    .bonus-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+
+    .bonus-section p {
+      font-size: 0.95rem;
+      color: var(--gray-700);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 700px) {
+      .pim-intro { grid-template-columns: 1fr; }
+      .photo-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -24,19 +171,116 @@
       <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
       Back to all projects
     </a>
-    <div class="page-tag">Work</div>
-    <h1>Manufacturing Performance Engineer Intern at PIM Brands</h1>
-    <p>PIM Brands — Summer 2025</p>
+    <div class="page-tag">Work Experience</div>
+    <h1>Manufacturing Performance Engineer Intern</h1>
+    <p>PIM Brands &mdash; Summer 2025</p>
   </div>
 </div>
 
 <div class="page-content">
-  <p style="color: var(--gray-500); font-style: italic;">
-    This page is coming soon — content will be added here.
-  </p>
+
+  <!-- Intro -->
+  <div class="pim-intro">
+    <div class="pim-intro-text">
+      <div class="content-label">Overview</div>
+      <div class="divider"></div>
+      <p>
+        During the summer of 2025, I worked at PIM Brands as the Manufacturing Performance Engineer Intern.
+        PIM Brands is the world's largest maker of real fruit snacks and a top-50 global manufacturer of
+        chocolate and non-chocolate confections. Below are the three project goals I had during my internship
+        along with a list of the tasks that went with each.
+      </p>
+    </div>
+    <div class="pim-intro-img">
+      <img src="../images/pim1.png" alt="Bryce inspecting Welch's Fruit Snacks on the Delkor packaging line" />
+    </div>
+  </div>
+
+  <!-- Project Goals -->
+  <div class="goals-section">
+    <div class="content-label">Project Goals</div>
+    <div class="divider"></div>
+
+    <div class="goal-card">
+      <div class="goal-header">
+        <div class="goal-number">1</div>
+        <h3>Develop Process Flow of Delkor Packaging Lines</h3>
+      </div>
+      <div class="goal-body">
+        <ul>
+          <li>Created a flowchart mapping all processes with their inputs and outputs</li>
+          <li>Identified all processes as value added or non-value added time</li>
+          <li>Measured cycle times for each process</li>
+          <li>Identified, located and measured waste on the line</li>
+          <li>Recorded ideal changeover times for flavor and packaging changeovers</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="goal-card">
+      <div class="goal-header">
+        <div class="goal-number">2</div>
+        <h3>Create/Update Work Instructions and Lead Training</h3>
+      </div>
+      <div class="goal-body">
+        <ul>
+          <li>Created and updated work instructions for Bosch and Delkor machines</li>
+          <li>Trained the Delkor operations team on new/updated work instructions</li>
+          <li>Gained experience communicating across language barriers</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="goal-card">
+      <div class="goal-header">
+        <div class="goal-number">3</div>
+        <h3>Record Delkor Centerline Changeover Settings</h3>
+      </div>
+      <div class="goal-body">
+        <ul>
+          <li>Monitored OEE of Delkor lines using Redzone software</li>
+          <li>Recorded centerline changeover settings during high performance</li>
+          <li>Captured settings of the former, Delkor and closer for three products</li>
+          <li>Created a Delkor changeover binder with all recorded settings</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bonus Project -->
+  <div class="bonus-section">
+    <h3>Welch's Fruit Snacks 25th Birthday Campaign</h3>
+    <p>
+      In addition to my three manufacturing project goals, I led a group of 8 interns on a project that
+      planned the strategic approach and tactical execution of the Welch's Fruit Snacks 25th birthday
+      celebration campaign. Our team presented the completed campaign plan at PIM Brands' corporate
+      headquarters.
+    </p>
+  </div>
+
+  <!-- Photo Grid -->
+  <div class="content-label" style="margin-top: 2rem;">Photos</div>
+  <div class="divider"></div>
+  <div class="photo-grid">
+    <img src="../images/pim2.png" alt="Bryce training the Delkor operations team on updated work instructions" />
+    <img src="../images/pim3.png" alt="Bryce presenting the Welch's 25th birthday campaign at corporate headquarters" />
+  </div>
+
+  <!-- Day to day -->
+  <div class="bonus-section">
+    <h3>Day-to-Day Contributions</h3>
+    <p>
+      On top of the projects I accomplished, I also contributed to the success of the brand by participating
+      in daily performance meetings and Gemba walks that applied lean six sigma methodologies to improve
+      efficiency and reduce waste on the factory floor.
+    </p>
+  </div>
+
   <div class="page-nav">
     <a href="../index.html#projects" class="btn btn-navy">&larr; Back to Projects</a>
   </div>
+
 </div>
 
 <footer>
