@@ -5,6 +5,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Design and Manufacturing Laboratory — Bryce Addeo Portfolio</title>
   <link rel="stylesheet" href="../css/style.css" />
+  <style>
+
+    .overview-box {
+      background: var(--cream);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 3.5rem;
+      border-left: 4px solid var(--orange);
+    }
+
+    .overview-box p {
+      font-size: 0.97rem;
+      color: var(--gray-700);
+      line-height: 1.85;
+    }
+
+    .tasks-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .tasks-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      font-size: 0.95rem;
+      color: var(--gray-700);
+      line-height: 1.7;
+      padding: 1rem 1.25rem;
+      border: 1.5px solid var(--gray-100);
+      border-radius: 10px;
+      background: var(--white);
+    }
+
+    .tasks-list li::before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--orange);
+      flex-shrink: 0;
+      margin-top: 0.5rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      margin-bottom: 3.5rem;
+    }
+
+    .skills-text {}
+
+    .skills-text p {
+      font-size: 0.97rem;
+      color: var(--gray-700);
+      line-height: 1.85;
+      margin-bottom: 1.25rem;
+    }
+
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      background: var(--navy);
+      color: var(--white);
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+    }
+
+    .skills-photo {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(13,35,71,0.12);
+    }
+
+    .skills-photo img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    @media (max-width: 700px) {
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -26,17 +123,113 @@
     </a>
     <div class="page-tag">Lab</div>
     <h1>Design and Manufacturing Laboratory</h1>
-    <p>EML 4504C — Fall 2024</p>
+    <p>EML 4504C &mdash; Fall 2024</p>
   </div>
 </div>
 
 <div class="page-content">
-  <p style="color: var(--gray-500); font-style: italic;">
-    This page is coming soon — content will be added here.
-  </p>
+
+  <!-- Overview -->
+  <div class="content-label">Overview</div>
+  <div class="divider"></div>
+  <div class="overview-box">
+    <p>
+      In this lab I worked with a team of three other engineers to manufacture component parts to an
+      oscillating 2-stroke air engine using milling machines and manual lathes. We completed industry
+      standard documentation such as manufacturing inspection records and engineering change notices for
+      the manufactured parts, assembled the air engines and tested them using a compressed air source of
+      60 feet per second, and then designed a food slicer in SolidWorks to attach to the air engine
+      accompanied by three design reports.
+    </p>
+  </div>
+
+  <!-- What We Did -->
+  <div class="content-label">Key Tasks</div>
+  <div class="divider"></div>
+  <ul class="tasks-list" >
+    <li>Manufactured component parts to an oscillating 2-stroke air engine using milling machines and manual lathes</li>
+    <li>Completed industry standard documentation including manufacturing inspection records and engineering change notices</li>
+    <li>Assembled the air engines and tested them using a compressed air source of 60 feet per second</li>
+    <li>Designed a food slicer attachment for the air engine in SolidWorks accompanied by three design reports</li>
+  </ul>
+
+  <!-- Design Reports -->
+  <div class="content-label">Design Reports</div>
+  <div class="divider"></div>
+  <ul class="doc-list" style="margin-bottom: 3.5rem;">
+    <li>
+      <a href="../pdfs/dml_report1.pdf" target="_blank" class="doc-link">
+        <div class="doc-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div class="doc-info">
+          <strong>DML Design Report 1</strong>
+          <span>First design report for the food slicer attachment project</span>
+        </div>
+        <div class="doc-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="../pdfs/dml_report2.pdf" target="_blank" class="doc-link">
+        <div class="doc-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div class="doc-info">
+          <strong>DML Design Report 2</strong>
+          <span>Second design report for the food slicer attachment project</span>
+        </div>
+        <div class="doc-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="../pdfs/dml_report3.pdf" target="_blank" class="doc-link">
+        <div class="doc-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div class="doc-info">
+          <strong>DML Design Report 3</strong>
+          <span>Third design report for the food slicer attachment project</span>
+        </div>
+        <div class="doc-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+    </li>
+  </ul>
+
+  <!-- Additional Skills -->
+  <div class="content-label">Additional Skills Practiced</div>
+  <div class="divider"></div>
+  <div class="skills-grid">
+    <div class="skills-text">
+      <p>
+        Beyond the core air engine project, this lab provided hands-on experience with a wide range of
+        manufacturing processes and techniques used in industry. These additional skills complemented the
+        primary coursework and broadened my practical understanding of how components are fabricated and
+        finished in a real shop environment.
+      </p>
+      <div class="skills-tags">
+        <span class="skill-tag">Sheet Metal Bending</span>
+        <span class="skill-tag">Punching & Blanking</span>
+        <span class="skill-tag">Stick Welding</span>
+        <span class="skill-tag">Tapping</span>
+        <span class="skill-tag">Bandsaw Cutting</span>
+        <span class="skill-tag">CNC Machining</span>
+      </div>
+    </div>
+    <div class="skills-photo">
+      <img src="../images/dml_welding.png" alt="Bryce in welding gear in the manufacturing lab" />
+    </div>
+  </div>
+
   <div class="page-nav">
     <a href="../index.html#projects" class="btn btn-navy">&larr; Back to Projects</a>
   </div>
+
 </div>
 
 <footer>
