@@ -5,6 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Control of Dynamic Systems Laboratory — Bryce Addeo Portfolio</title>
   <link rel="stylesheet" href="../css/style.css" />
+  <style>
+
+    .lab-entry {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      align-items: start;
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .lab-entry.no-image {
+      grid-template-columns: 1fr;
+    }
+
+    .lab-entry:last-of-type {
+      border-bottom: none;
+    }
+
+    .lab-number {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.5rem;
+    }
+
+    .lab-number::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--orange);
+    }
+
+    .lab-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--navy);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .lab-abstract {
+      font-size: 0.93rem;
+      color: var(--gray-700);
+      line-height: 1.85;
+      margin-bottom: 1.25rem;
+    }
+
+    .lab-photo {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(13,35,71,0.1);
+    }
+
+    .lab-photo img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 4/3;
+    }
+
+    @media (max-width: 700px) {
+      .lab-entry {
+        grid-template-columns: 1fr;
+      }
+      .lab-photo {
+        order: -1;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -26,17 +104,117 @@
     </a>
     <div class="page-tag">Lab</div>
     <h1>Control of Dynamic Systems Laboratory</h1>
-    <p>EML 4312L</p>
+    <p>EML 4312L &mdash; Three lab experiments in feedback control, system identification, and LQR design</p>
   </div>
 </div>
 
 <div class="page-content">
-  <p style="color: var(--gray-500); font-style: italic;">
-    This page is coming soon — content will be added here.
-  </p>
+
+  <!-- Lab 1 -->
+  <div class="lab-entry">
+    <div class="lab-text">
+      <div class="lab-number">Lab 1</div>
+      <div class="lab-title">Determining Transfer Function of a Motor/Flywheel System Through Experimental Methods</div>
+      <p class="lab-abstract">
+        The objective of this lab was to experimentally obtain the transfer function for two custom-built
+        motor/flywheel systems utilizing two experimental methods and comparing the results to theoretically
+        obtained bode plots. Method one, the frequency domain approach, involved feeding in a series of sine
+        waves of the same amplitude but varying frequencies, recording the system's response to create a bode
+        plot and find the transfer function. Method two, the time domain approach, involved feeding an impulse
+        or step response into the system to create a second transfer function. The frequency domain approach
+        resulted in more accurate results for both systems, likely due to testing at one frequency at a time
+        giving a clearer response compared to the inherently noisier square wave. Future reproductions would
+        benefit from off-the-shelf thrust bearings to reduce friction and higher accuracy gears to increase
+        system response.
+      </p>
+      <a href="../pdfs/Team41_Controls_Lab1.pdf" target="_blank" class="doc-link">
+        <div class="doc-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div class="doc-info">
+          <strong>Lab 1 Report — Transfer Function of a Motor/Flywheel System</strong>
+          <span>Full lab report with bode plots, transfer functions, and analysis</span>
+        </div>
+        <div class="doc-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+    </div>
+    <div class="lab-photo">
+      <img src="../images/controls_lab1.png" alt="Bode plot comparing System 1 and System 2 frequency responses" />
+    </div>
+  </div>
+
+  <!-- Lab 2 -->
+  <div class="lab-entry no-image">
+    <div class="lab-text">
+      <div class="lab-number">Lab 2</div>
+      <div class="lab-title">Comparison of Various Closed Loop Controllers with a Motor/Flywheel System</div>
+      <p class="lab-abstract">
+        This lab investigated the performance of several feedback control strategies — bang-bang,
+        proportional, PID, and full-state-space — applied to a motor/flywheel system. Each method was
+        evaluated using 0.25 Hz square and sine wave inputs to compare tracking accuracy, response speed,
+        and control effort. The bang-bang controller produced the fastest response with rise times as low
+        as 0.10 seconds but exhibited the largest RMS errors up to 130° and overshoots of 25% due to its
+        on-off switching nature. The proportional controller reduced RMS error to 25° at Kp = 5.0, though
+        with slower rise times around 0.74 seconds. The tuned PID controller (Kp = 8, Ki = 35, Kd = 0.35)
+        and full-state-space controller (Kp = 18.7165, Ki = 0, Kd = 0.5679) provided the most balanced
+        performance, achieving quick settling with minimal steady-state error and smoother control signals.
+      </p>
+      <a href="../pdfs/Team41_Controls_Lab2.pdf" target="_blank" class="doc-link">
+        <div class="doc-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div class="doc-info">
+          <strong>Lab 2 Report — Comparison of Closed Loop Controllers</strong>
+          <span>Full lab report with controller comparisons, RMS errors, and analysis</span>
+        </div>
+        <div class="doc-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Lab 3 -->
+  <div class="lab-entry">
+    <div class="lab-text">
+      <div class="lab-number">Lab 3</div>
+      <div class="lab-title">LQR Control of Downward Rotational Pendulum</div>
+      <p class="lab-abstract">
+        The objective of this experiment was to implement and evaluate a full-state feedback controller on
+        a downwards pendulum using both manual tuning and Linear Quadratic Regulator (LQR) methods. An LQR
+        controller was created in MATLAB using the system's state-space model with iteratively refined Q and
+        R matrices. Five test cases were performed comparing manual tuning, baseline LQR control, Q-matrix
+        adjustments, and large decreases or increases in the R value. The optimized LQR controller with
+        adjusted Q values produced the best result, reducing pendulum RMS error from 21.65° to 12.96°,
+        decreasing command effort by 20.9%, and lowering overshoot by 80.7%. Extreme modifications to the
+        R value led to highly unstable or overly sluggish responses, demonstrating the sensitivity of LQR
+        control to state and input weighting and the importance of appropriately tuned parameters for
+        improved system behavior.
+      </p>
+      <a href="../pdfs/Team41_Controls_Lab_FP.pdf" target="_blank" class="doc-link">
+        <div class="doc-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div class="doc-info">
+          <strong>Lab 3 Report — LQR Control of Downward Rotational Pendulum</strong>
+          <span>Full lab report with LQR design, test cases, and performance analysis</span>
+        </div>
+        <div class="doc-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+    </div>
+    <div class="lab-photo">
+      <img src="../images/controls_lab3.png" alt="Platen and pendulum rotation graph for LQR control experiment" />
+    </div>
+  </div>
+
   <div class="page-nav">
     <a href="../index.html#projects" class="btn btn-navy">&larr; Back to Projects</a>
   </div>
+
 </div>
 
 <footer>
