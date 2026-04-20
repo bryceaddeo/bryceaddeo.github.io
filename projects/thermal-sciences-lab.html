@@ -5,6 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thermal Sciences Laboratory — Bryce Addeo Portfolio</title>
   <link rel="stylesheet" href="../css/style.css" />
+  <style>
+
+    .lab-entry {
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .lab-entry:last-of-type {
+      border-bottom: none;
+    }
+
+    .lab-number {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.5rem;
+    }
+
+    .lab-number::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--orange);
+    }
+
+    .lab-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--navy);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .lab-abstract {
+      font-size: 0.93rem;
+      color: var(--gray-700);
+      line-height: 1.85;
+      margin-bottom: 1.25rem;
+      max-width: 780px;
+    }
+
+  </style>
 </head>
 <body>
 
@@ -26,17 +76,158 @@
     </a>
     <div class="page-tag">Lab</div>
     <h1>Thermal Sciences Laboratory</h1>
-    <p>EML 3301L</p>
+    <p>EML 3301L &mdash; Five experiments in fluid mechanics, heat transfer, and thermodynamic systems</p>
   </div>
 </div>
 
 <div class="page-content">
-  <p style="color: var(--gray-500); font-style: italic;">
-    This page is coming soon — content will be added here.
-  </p>
+
+  <!-- Lab 1 -->
+  <div class="lab-entry">
+    <div class="lab-number">Lab 1</div>
+    <div class="lab-title">Pipe Loss Lab</div>
+    <p class="lab-abstract">
+      The objective of this experiment is to characterize frictional losses in a piping system for cooling
+      applications by determining the head losses, friction factors, and pipe roughness associated with two
+      straight copper pipes of differing diameters, as well as the loss coefficient of a 90° elbow. In
+      addition to solving the values of the above parameters, an uncertainty analysis using statistical and
+      Root Sum Squared (RSS) methods will be carried out to determine the accuracy of results. This
+      experiment characterizes the relationship between flow rate and pressure loss and evaluates the effect
+      of pipe geometry and surface roughness on energy dissipation in internal flows.
+    </p>
+    <a href="../pdfs/Group_T9A_Pipe_Loss_Lab_Report.pdf" target="_blank" class="doc-link">
+      <div class="doc-icon">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      </div>
+      <div class="doc-info">
+        <strong>Lab 1 Report — Pipe Loss Lab</strong>
+        <span>Full lab report with friction factors, head loss analysis, and uncertainty calculations</span>
+      </div>
+      <div class="doc-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+  </div>
+
+  <!-- Lab 2 -->
+  <div class="lab-entry">
+    <div class="lab-number">Lab 2</div>
+    <div class="lab-title">Fan Performance Lab</div>
+    <p class="lab-abstract">
+      The objective of this experiment is to evaluate the performance characteristics of two centrifugal
+      fans with different impeller blade geometry — one with radial blades and the other with
+      backwards-inclined blades — operating at multiple speeds. Specifically, the lab aims to determine
+      the relationship between head rise, volumetric flow rate, shaft power, and efficiency for both fans.
+      Dimensionless performance coefficients corresponding to head, power, and flow will be calculated to
+      assess similarity behavior between the two fans operating at varying speeds and air flow conditions
+      for each data set.
+    </p>
+    <a href="../pdfs/Group_T9A_Fan_Performance_Lab_Report.pdf" target="_blank" class="doc-link">
+      <div class="doc-icon">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      </div>
+      <div class="doc-info">
+        <strong>Lab 2 Report — Fan Performance Lab</strong>
+        <span>Full lab report with performance curves, efficiency analysis, and dimensionless coefficients</span>
+      </div>
+      <div class="doc-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+  </div>
+
+  <!-- Lab 3 -->
+  <div class="lab-entry">
+    <div class="lab-number">Lab 3</div>
+    <div class="lab-title">Heat Exchanger Lab</div>
+    <p class="lab-abstract">
+      The objective of this experiment is to characterize the performance of the departmental double pipe
+      heat exchanger for potential research applications. Specifically, the Log Mean Temperature Difference
+      (LMTD) will be evaluated for both parallel and counter-flow configurations, and the overall heat
+      transfer coefficient area product (UA) is going to be determined experimentally. These values will
+      be compared to theoretical predictions obtained using empirical heat transfer correlations.
+      Additionally, the fouling factor will be estimated, axial temperature distributions will be analyzed,
+      and the uncertainty in UA for each flow configuration is going to be quantified to establish the
+      thermal capability and reliability of the apparatus for future research use.
+    </p>
+    <a href="../pdfs/Group_T9A_Heat_Exchanger_Lab_Report.pdf" target="_blank" class="doc-link">
+      <div class="doc-icon">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      </div>
+      <div class="doc-info">
+        <strong>Lab 3 Report — Heat Exchanger Lab</strong>
+        <span>Full lab report with LMTD analysis, UA calculations, and fouling factor estimation</span>
+      </div>
+      <div class="doc-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+  </div>
+
+  <!-- Lab 4 -->
+  <div class="lab-entry">
+    <div class="lab-number">Lab 4</div>
+    <div class="lab-title">Cooling Tower Lab</div>
+    <p class="lab-abstract">
+      The objective of this experiment is to characterize the thermal performance of a packed column
+      cooling tower through analysis of heat and mass transfer between air and water streams. This
+      experiment evaluates the variation in air humidity ratio and relative humidity between the inlet
+      and exit conditions, predicts the exit water temperature using a first law energy balance, and
+      determines the rate of heat dissipation within the system. The measured results are compared to
+      analytical predictions to assess the accuracy of the governing thermodynamic relationships and
+      the effectiveness of the cooling tower under varying water flow rates and heating conditions.
+    </p>
+    <a href="../pdfs/Group_T9A_Cooling_Tower_Lab_Report.pdf" target="_blank" class="doc-link">
+      <div class="doc-icon">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      </div>
+      <div class="doc-info">
+        <strong>Lab 4 Report — Cooling Tower Lab</strong>
+        <span>Full lab report with heat and mass transfer analysis and energy balance calculations</span>
+      </div>
+      <div class="doc-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+  </div>
+
+  <!-- Lab 5 -->
+  <div class="lab-entry">
+    <div class="lab-number">Lab 5</div>
+    <div class="lab-title">Design and Optimization of a Hydraulic Oil Delivery System for Industrial Press Operation</div>
+    <p class="lab-abstract">
+      This project presents the design and evaluation of a hydraulic piping system for delivering and
+      returning oil to a hydraulic press while meeting specified performance metrics. The objective was
+      to ensure 30 to 40 gpm delivery of oil at 50 psia, select an appropriate pump, and design a return
+      system capable of operating under gravity while maintaining a maximum elevated tank volume of 10
+      gallons. The analysis applied conservation of mass and energy principles through the extended
+      Bernoulli equation, along with Darcy-Weisbach and minor loss correlations, to determine system head
+      requirements and flow behavior. A required pump head of approximately 107 ft at 40 gpm was
+      calculated and used to select a suitable centrifugal pump that operates safely within its performance
+      range and avoids cavitation. The return line was sized as a 2-inch schedule 40 PVC pipe, shown to
+      provide sufficient flow under gravity without an additional pump, and an overflow inlet was
+      recommended to maintain consistent fluid levels and prevent air entrainment. A diaphragm valve was
+      selected for effective flow control, and a cost analysis confirmed the chosen configuration balances
+      performance and economic efficiency.
+    </p>
+    <a href="../pdfs/Group_T9A_Design_Project_Report.pdf" target="_blank" class="doc-link">
+      <div class="doc-icon">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      </div>
+      <div class="doc-info">
+        <strong>Lab 5 Report — Hydraulic Oil Delivery System Design</strong>
+        <span>Full design report with pump selection, pipe sizing, and cost analysis</span>
+      </div>
+      <div class="doc-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+  </div>
+
   <div class="page-nav">
     <a href="../index.html#projects" class="btn btn-navy">&larr; Back to Projects</a>
   </div>
+
 </div>
 
 <footer>
