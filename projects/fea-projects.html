@@ -5,6 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Finite Element Analysis Projects — Bryce Addeo Portfolio</title>
   <link rel="stylesheet" href="../css/style.css" />
+  <style>
+
+    .fea-entry {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 2.5rem;
+      align-items: start;
+      margin-bottom: 3.5rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .fea-entry:last-of-type {
+      border-bottom: none;
+    }
+
+    .project-number {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.5rem;
+    }
+
+    .project-number::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--orange);
+    }
+
+    .project-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--navy);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .project-abstract {
+      font-size: 0.93rem;
+      color: var(--gray-700);
+      line-height: 1.85;
+      margin-bottom: 1.25rem;
+    }
+
+    .fea-photo {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(13,35,71,0.12);
+    }
+
+    .fea-photo img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 16/9;
+    }
+
+    @media (max-width: 700px) {
+      .fea-entry {
+        grid-template-columns: 1fr;
+      }
+      .fea-photo { order: -1; }
+    }
+  </style>
 </head>
 <body>
 
@@ -26,17 +98,91 @@
     </a>
     <div class="page-tag">Project</div>
     <h1>Finite Element Analysis Projects</h1>
-    <p>EML 4536</p>
+    <p>EML 4536 &mdash; Two FEA projects using Abaqus for structural analysis and design optimization</p>
   </div>
 </div>
 
 <div class="page-content">
-  <p style="color: var(--gray-500); font-style: italic;">
-    This page is coming soon — content will be added here.
-  </p>
+
+  <!-- Project 1 -->
+  <div class="fea-entry">
+    <div class="fea-text">
+      <div class="project-number">Project 1</div>
+      <div class="project-title">Finite Element Analysis of Truss with Iterative Area Optimization</div>
+      <p class="project-abstract">
+        This report presents a finite element analysis (FEA) of a two-dimensional truss structure
+        performed using Abaqus to determine member stresses and nodal displacements, followed by a fully
+        stressed design optimization. Results from the initial analysis revealed that element stresses
+        ranged from &minus;431 psi to 345 psi when all cross-sectional areas were equal to 3.48 in².
+        Displacement results confirmed correct boundary condition and load implementation through near-zero
+        displacements at constrained nodes and higher displacements at nodes with applied forces. The fully
+        stressed design procedure iteratively adjusted the cross-sectional areas of each member to bring
+        element stresses closer to the allowable limit of 350 psi while adhering to a minimum area
+        constraint of 0.1 in². After four iterations, most members achieved stresses near the allowable
+        value, demonstrating convergence and the effectiveness of the design approach. The study validated
+        that FEA can efficiently optimize truss performance by balancing material use, stress distribution,
+        and design constraints.
+      </p>
+      <a href="../pdfs/Addeob_FEA_Project_1.pdf" target="_blank" class="doc-link">
+        <div class="doc-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div class="doc-info">
+          <strong>Project 1 Report — FEA of Truss with Iterative Area Optimization</strong>
+          <span>Full report with Abaqus analysis, stress results, and fully stressed design iterations</span>
+        </div>
+        <div class="doc-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+    </div>
+    <div class="fea-photo">
+      <img src="../images/fea_project1.png" alt="Abaqus stress contour plot of 2D truss structure" />
+    </div>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="fea-entry">
+    <div class="fea-text">
+      <div class="project-number">Project 2</div>
+      <div class="project-title">Finite Element Analysis and Design of Torque-Arm</div>
+      <p class="project-abstract">
+        This project investigates the structural performance and minimum mass design of a torque-arm
+        subjected to combined horizontal and vertical loading. FEA in Abaqus was used to evaluate
+        displacement and stress response while systematically refining the mesh and modifying geometric
+        design variables. A preliminary Mechanics of Materials calculation first approximated the vertical
+        deflection and maximum Von Mises stress, providing a baseline for comparison with numerical
+        results. A convergence study using global element sizes of 0.62, 1.0, and 1.61 established a
+        convergence rate of &alpha; = 0.67 and an exact vertical displacement of U&#8320; = 0.09735 cm
+        at the load application point. An element type comparison showed that higher-order elements
+        (6-node triangle and 8-node quadrilateral) yielded more accurate results than their linear
+        counterparts due to improved interpolation of bending behavior. A minimum-mass optimization was
+        then performed by adjusting geometric variables within provided bounds, achieving a reduced mass
+        of 4.13751 kg while maintaining a maximum Von Mises stress of 245.4 MPa — just below the
+        allowable limit of 250 MPa.
+      </p>
+      <a href="../pdfs/Addeob_FEA_Project_2.pdf" target="_blank" class="doc-link">
+        <div class="doc-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div class="doc-info">
+          <strong>Project 2 Report — FEA and Design of Torque-Arm</strong>
+          <span>Full report with convergence study, element comparison, and mass optimization</span>
+        </div>
+        <div class="doc-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+    </div>
+    <div class="fea-photo">
+      <img src="../images/fea_project2.png" alt="Abaqus sketch of torque-arm geometry with dimensions" />
+    </div>
+  </div>
+
   <div class="page-nav">
     <a href="../index.html#projects" class="btn btn-navy">&larr; Back to Projects</a>
   </div>
+
 </div>
 
 <footer>
