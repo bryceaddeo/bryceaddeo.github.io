@@ -3,8 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Machine Learning Project: Sea Turtle Conservation — Bryce Addeo Portfolio</title>
+  <title>Sea Turtle Conservation AI Project — Bryce Addeo Portfolio</title>
   <link rel="stylesheet" href="../css/style.css" />
+  <style>
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      margin-bottom: 3.5rem;
+    }
+
+    .intro-text p {
+      color: var(--gray-700);
+      font-size: 0.97rem;
+      line-height: 1.85;
+    }
+
+    .intro-img {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(13,35,71,0.12);
+    }
+
+    .intro-img img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .abstract-box {
+      background: var(--cream);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid var(--orange);
+    }
+
+    .abstract-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin-bottom: 1.25rem;
+    }
+
+    .abstract-box p {
+      font-size: 0.95rem;
+      color: var(--gray-700);
+      line-height: 1.85;
+    }
+
+    .tasks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .task-card {
+      background: var(--white);
+      border: 1.5px solid var(--gray-100);
+      border-radius: 12px;
+      padding: 1.25rem;
+      transition: box-shadow 0.18s, border-color 0.18s;
+    }
+
+    .task-card:hover {
+      box-shadow: 0 6px 24px rgba(13,35,71,0.09);
+      border-color: var(--orange);
+    }
+
+    .task-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.85rem;
+    }
+
+    .task-icon svg { width: 20px; height: 20px; fill: var(--orange-light); }
+
+    .task-card h4 {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+
+    .task-card p {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 700px) {
+      .intro-grid { grid-template-columns: 1fr; }
+      .tasks-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -24,19 +125,101 @@
       <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
       Back to all projects
     </a>
-    <div class="page-tag">Computing</div>
-    <h1>Machine Learning Project: Sea Turtle Conservation</h1>
-    <p>Independent Project</p>
+    <div class="page-tag">AI Project</div>
+    <h1>Machine Learning Project:<br>Sea Turtle Conservation</h1>
+    <p>AI &amp; Machine Learning &mdash; Supervised and Unsupervised Learning for Wildlife Conservation</p>
   </div>
 </div>
 
 <div class="page-content">
-  <p style="color: var(--gray-500); font-style: italic;">
-    This page is coming soon — content will be added here.
-  </p>
+
+  <!-- Intro + Image -->
+  <div class="intro-grid">
+    <div class="intro-text">
+      <div class="content-label">Project Overview</div>
+      <div class="divider"></div>
+      <p>
+        This project aimed to aid efforts in sea turtle conservation by leveraging artificial intelligence
+        to enhance public knowledge, improve measurement techniques, and enable species identification of
+        sea turtles. Through the training of an AI bot named Cammy, the project demonstrated the power of
+        supervised and unsupervised learning to perform three distinct conservation tasks.
+      </p>
+    </div>
+    <div class="intro-img">
+      <img src="../images/sea_turtle_cammy.png" alt="Cammy AI bot identifying four species of sea turtles from photographs" />
+    </div>
+  </div>
+
+  <!-- Three Tasks -->
+  <div class="content-label">What Cammy Was Trained To Do</div>
+  <div class="divider"></div>
+  <div class="tasks-grid">
+    <div class="task-card">
+      <div class="task-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <h4>Public Education</h4>
+      <p>Trained using supervised learning to answer commonly asked questions about sea turtles for effective communication and education.</p>
+    </div>
+    <div class="task-card">
+      <div class="task-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+      </div>
+      <h4>Weight Prediction</h4>
+      <p>A regression model predicts sea turtle weights based on species, carapace length, and carapace width, reducing invasive measurement needs.</p>
+    </div>
+    <div class="task-card">
+      <div class="task-icon">
+        <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      </div>
+      <h4>Species Identification</h4>
+      <p>Classification and unsupervised learning enable Cammy to accurately identify sea turtle species from photographs for research data grouping.</p>
+    </div>
+  </div>
+
+  <!-- Abstract -->
+  <div class="abstract-box">
+    <h3>Abstract</h3>
+    <p>
+      The Sea Turtle Conservation AI Project aimed to aid efforts in sea turtle conservation by leveraging
+      artificial intelligence to enhance public knowledge, improve measurement techniques, and enable
+      species identification of sea turtles. Through the training of an AI bot named Cammy, the project
+      demonstrated the power of supervised and unsupervised learning to perform three distinct tasks.
+      First, Cammy was trained using supervised learning to answer commonly asked questions about sea
+      turtles, enabling more effective communication and education. Second, a regression model was applied
+      to predict sea turtle weights based on species, carapace length, and carapace width, reducing the
+      need for invasive measurement techniques. Finally, classification and unsupervised learning were
+      used to train Cammy to accurately identify sea turtle species from photographs to make it easier
+      for researchers to analyze and group data. While Cammy performed well overall, the bot still made
+      a few errors suggesting there is room for improvement and further training. Despite the errors, the
+      project undoubtedly proved the potential of AI in advancing wildlife conservation.
+    </p>
+  </div>
+
+  <!-- Report Link -->
+  <div class="content-label">Documentation</div>
+  <div class="divider"></div>
+  <ul class="doc-list" style="margin-bottom: 2rem;">
+    <li>
+      <a href="../pdfs/Addeob_Sea_Turtle_Conservation_AI_Project.pdf" target="_blank" class="doc-link">
+        <div class="doc-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div class="doc-info">
+          <strong>Full Project Report — Sea Turtle Conservation AI</strong>
+          <span>Complete report including model details, training methodology, and results</span>
+        </div>
+        <div class="doc-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+    </li>
+  </ul>
+
   <div class="page-nav">
     <a href="../index.html#projects" class="btn btn-navy">&larr; Back to Projects</a>
   </div>
+
 </div>
 
 <footer>
